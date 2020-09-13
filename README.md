@@ -1,4 +1,4 @@
-## CPP
+# CPP
 ### Pointers vs References
 References are essentially pointers in disguise. Internally the same thing happens, it's just easier to write and read the code.
 
@@ -18,25 +18,27 @@ int* a = new int(5);
 int a = 5;
 ```
 
-When we use `new`, the memory isn't cleared until we call delete. So it's useful when we want to return a pointer to a new variable as shown below:
+When we use `new`, the memory isn't cleared until we call delete. So it's useful when we want to return a pointer to a local variable as shown below:
 ```
 int* get_num()
 {
 	int* a = new int(5);
 	*a *= 100;
 	return a;
-}
 
-int main()
-{
-	int* a = get_num();
-	cout<<*a;
-	delete a;
+	// following won't work
+	// int a = 5;
+	// return &a;
 }
 ```
 
-### [Cherno's C++ playlist](https://www.youtube.com/watch?v=18c3MTX0PK0&list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb&ab_channel=TheCherno)
+### Templates
+
+
+
+### [Cherno's playlist](https://www.youtube.com/watch?v=fLgTtaqqJp0&list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb&index=19&ab_channel=TheCherno)
 Watched:
 1. Till Classes vs structs (upto 19)
+1. 20
 1. Strings (32)
-1. `new` (39)
+1. 
